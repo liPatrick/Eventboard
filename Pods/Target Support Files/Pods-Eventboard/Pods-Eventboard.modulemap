@@ -1,0 +1,6 @@
+framework module Pods_Eventboard {
+  umbrella header "Pods-Eventboard-umbrella.h"
+
+  export *
+  module * { export * }
+}
