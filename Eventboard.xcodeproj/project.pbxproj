@@ -24,6 +24,7 @@
 		9DBCF0A3220F94B6005E2926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBCF0A1220F94B6005E2926 /* LaunchScreen.storyboard */; };
 		9DBCF0AE220F94B7005E2926 /* EventboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCF0AD220F94B7005E2926 /* EventboardTests.swift */; };
 		9DBCF0B9220F94B7005E2926 /* EventboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCF0B8220F94B7005E2926 /* EventboardUITests.swift */; };
+		9DBCF0C722111ECF005E2926 /* InsideEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCF0C622111ECF005E2926 /* InsideEventVC.swift */; };
 		D98155F3EE21F853D30D7B22 /* Pods_EventboardTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E164E78DB4ECCCD00C3B5D /* Pods_EventboardTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		9DBCF0B4220F94B7005E2926 /* EventboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBCF0B8220F94B7005E2926 /* EventboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventboardUITests.swift; sourceTree = "<group>"; };
 		9DBCF0BA220F94B7005E2926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBCF0C622111ECF005E2926 /* InsideEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideEventVC.swift; sourceTree = "<group>"; };
 		A16F37F42BFE7CD28FFC7818 /* Pods-EventboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventboardUITests.release.xcconfig"; path = "Target Support Files/Pods-EventboardUITests/Pods-EventboardUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A3E36E509618E8429CF1BBCF /* Pods-Eventboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eventboard.debug.xcconfig"; path = "Target Support Files/Pods-Eventboard/Pods-Eventboard.debug.xcconfig"; sourceTree = "<group>"; };
 		AA5325AD5F7AB8F0B498AC3E /* Pods-EventboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventboardUITests.debug.xcconfig"; path = "Target Support Files/Pods-EventboardUITests/Pods-EventboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				9DBCF0A1220F94B6005E2926 /* LaunchScreen.storyboard */,
 				9DBCF0A4220F94B6005E2926 /* Info.plist */,
 				2135D6B52210F3C800810766 /* fonts */,
+				9DBCF0C622111ECF005E2926 /* InsideEventVC.swift */,
 			);
 			path = Eventboard;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21BDAE9E2210FC45008A37DF /* CardViewCell.swift in Sources */,
+				9DBCF0C722111ECF005E2926 /* InsideEventVC.swift in Sources */,
 				21BDAEA02210FCD0008A37DF /* CardModel.swift in Sources */,
 				219298682211047400D7B025 /* CardsLayout.swift in Sources */,
 				9DBCF09B220F94B5005E2926 /* ViewController.swift in Sources */,
