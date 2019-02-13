@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jQ9-D1-6c6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.30.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.19.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,47 +32,60 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 events near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-T4-STC">
-                                <rect key="frame" x="41" y="185" width="139" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 events near you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-T4-STC">
+                                <rect key="frame" x="41" y="185" width="133" height="20"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-7a-3JV">
-                                <rect key="frame" x="0.0" y="284" width="414" height="380"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-7a-3JV">
+                                <rect key="frame" x="0.0" y="195" width="414" height="552"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v1P-Ra-UUz">
-                                    <size key="itemSize" width="394" height="379"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v1P-Ra-UUz">
+                                    <size key="itemSize" width="250" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="5K1-wH-zxL" customClass="CardViewCell" customModule="Eventboard" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="379"/>
+                                        <rect key="frame" x="0.0" y="76" width="250" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="379"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-eY-pMq">
+                                <rect key="frame" x="176" y="762" width="62" height="62"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="27"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.73725490199999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sMR-7a-3JV" firstAttribute="top" secondItem="g6S-T4-STC" secondAttribute="bottom" constant="79" id="AfJ-X1-h2j"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="centerX" secondItem="sMR-7a-3JV" secondAttribute="centerX" id="5FS-Om-77h"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="top" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="15" id="8pQ-S0-Wt3"/>
+                            <constraint firstItem="sMR-7a-3JV" firstAttribute="top" secondItem="g6S-T4-STC" secondAttribute="bottom" constant="-10" id="AfJ-X1-h2j"/>
                             <constraint firstItem="sMR-7a-3JV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HuA-To-EgN"/>
                             <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="KDY-LP-WbQ"/>
                             <constraint firstItem="g6S-T4-STC" firstAttribute="top" secondItem="qKN-yZ-2Uf" secondAttribute="bottom" constant="8" symbolic="YES" id="L5D-9r-YgT"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="OAz-cQ-BHY"/>
                             <constraint firstItem="qKN-yZ-2Uf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Sdt-y8-gyh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="198" id="twf-fc-GxC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GfT-eY-pMq" secondAttribute="bottom" constant="38" id="Vyo-yQ-Xnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="115" id="twf-fc-GxC"/>
                             <constraint firstAttribute="trailing" secondItem="sMR-7a-3JV" secondAttribute="trailing" id="xog-fm-hsM"/>
                             <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="g6S-T4-STC" secondAttribute="leading" id="zHG-nE-jzP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addEventButton" destination="GfT-eY-pMq" id="gdY-lx-g0W"/>
                         <outlet property="collectionView" destination="sMR-7a-3JV" id="Y1W-Ho-2bA"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// add location, date
 struct CardModel {
     let image : UIImage
     let summaryDescription : String

@@ -12,7 +12,6 @@
 		2135D6B22210F3C200810766 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2135D6AE2210F3C100810766 /* Quicksand-Light.ttf */; };
 		2135D6B32210F3C200810766 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2135D6AF2210F3C200810766 /* Quicksand-Bold.ttf */; };
 		2135D6B42210F3C200810766 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2135D6B02210F3C200810766 /* Quicksand-Regular.ttf */; };
-		219298682211047400D7B025 /* CardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219298672211047400D7B025 /* CardsLayout.swift */; };
 		21BDAE9C2210FA27008A37DF /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21BDAE9B2210FA27008A37DF /* CardView.xib */; };
 		21BDAE9E2210FC45008A37DF /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDAE9D2210FC45008A37DF /* CardViewCell.swift */; };
 		21BDAEA02210FCD0008A37DF /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDAE9F2210FCD0008A37DF /* CardModel.swift */; };
@@ -50,7 +49,6 @@
 		2135D6AE2210F3C100810766 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
 		2135D6AF2210F3C200810766 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		2135D6B02210F3C200810766 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
-		219298672211047400D7B025 /* CardsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsLayout.swift; sourceTree = "<group>"; };
 		21BDAE9B2210FA27008A37DF /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		21BDAE9D2210FC45008A37DF /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		21BDAE9F2210FCD0008A37DF /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				21BDAE9F2210FCD0008A37DF /* CardModel.swift */,
-				219298672211047400D7B025 /* CardsLayout.swift */,
 				21BDAE9B2210FA27008A37DF /* CardView.xib */,
 				21BDAE9D2210FC45008A37DF /* CardViewCell.swift */,
 			);
@@ -419,7 +416,6 @@
 				21BDAE9E2210FC45008A37DF /* CardViewCell.swift in Sources */,
 				9DBCF0C722111ECF005E2926 /* InsideEventVC.swift in Sources */,
 				21BDAEA02210FCD0008A37DF /* CardModel.swift in Sources */,
-				219298682211047400D7B025 /* CardsLayout.swift in Sources */,
 				9DBCF09B220F94B5005E2926 /* ViewController.swift in Sources */,
 				9DBCF099220F94B5005E2926 /* AppDelegate.swift in Sources */,
 			);
