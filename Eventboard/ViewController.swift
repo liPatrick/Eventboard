@@ -42,7 +42,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         //setup circular button
         self.addEventButton.layer.cornerRadius = 0.5 * self.addEventButton.bounds.size.width
-        self.addEventButton.clipsToBounds = true
+        self.addEventButton.clipsToBounds = false
         
         // setup collection view
         // change this later to a UIPageController to have the three white dots
@@ -58,6 +58,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // replace later with real data loaded from firebase
     let data : [CardModel] = [(CardModel(image: UIImage(named: "coffee")!, summaryDescription: "Presenting on the effects of early childhood dementia, utilizing blockchain technologies and neural networks.")),
+                              (CardModel(image: UIImage(named: "coffee")!, summaryDescription: "Presenting on the effects of simple convoluntional neural networks, using MATLab and Python.")),
                               (CardModel(image: UIImage(named: "coffee")!, summaryDescription: "Presenting on the effects of simple convoluntional neural networks, using MATLab and Python."))]
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,7 +76,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_: UICollectionView, layout: UICollectionViewLayout, minimumLineSpacingForSectionAt: Int) -> CGFloat {
         // leave just enough of the card so that it shows up
         // fix later with real #s based on screen size
-        return 70
+        return ((self.view.frame.width / 2) + 50 - 137.5)
     }
     
     // set default size
@@ -87,14 +88,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // set spacing on left
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         // center item in screen, and leave a tiny bit of space for next element
-        let inset = UIEdgeInsets(top: 0, left: ((self.view.frame.width) / 2) - 162.5, bottom: 0, right: 70)
+        //let inset = UIEdgeInsets(top: 0, left: ((self.view.frame.width) / 2) - 162.5, bottom: 0, right: 70)
         // if single item, then center the element
         let insetSingleItem = UIEdgeInsets(top: 0, left: ((self.view.frame.width) / 2) - 137.5, bottom: 0, right: 70)
         
         // replace the hardcoded #s (162.5, 137.5) with screen.size.width stuff later
         // replace 70 with the size from minimumLineSpacing
         
-        return (self.collectionView.numberOfItems(inSection: 0) > 1 ? inset : insetSingleItem)
+        //return (self.collectionView.numberOfItems(inSection: 0) > 1 ? inset : insetSingleItem)
+        
+        return insetSingleItem
     }
 }
 

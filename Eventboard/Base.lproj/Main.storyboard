@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-7a-3JV">
-                                <rect key="frame" x="0.0" y="195" width="414" height="552"/>
+                                <rect key="frame" x="0.0" y="213" width="414" height="499"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v1P-Ra-UUz">
                                     <size key="itemSize" width="250" height="400"/>
@@ -49,7 +49,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="5K1-wH-zxL" customClass="CardViewCell" customModule="Eventboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="76" width="250" height="400"/>
+                                        <rect key="frame" x="0.0" y="49.666666666666664" width="250" height="400"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="250" height="400"/>
@@ -59,28 +59,40 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-eY-pMq">
-                                <rect key="frame" x="176" y="762" width="62" height="62"/>
+                                <rect key="frame" x="176" y="796" width="62" height="62"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GfT-eY-pMq" secondAttribute="height" multiplier="1:1" id="To4-yH-fS6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="27"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.73725490199999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lM8-7U-4ls">
+                                <rect key="frame" x="188" y="729" width="38" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GfT-eY-pMq" firstAttribute="centerX" secondItem="sMR-7a-3JV" secondAttribute="centerX" id="5FS-Om-77h"/>
-                            <constraint firstItem="GfT-eY-pMq" firstAttribute="top" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="15" id="8pQ-S0-Wt3"/>
-                            <constraint firstItem="sMR-7a-3JV" firstAttribute="top" secondItem="g6S-T4-STC" secondAttribute="bottom" constant="-10" id="AfJ-X1-h2j"/>
-                            <constraint firstItem="sMR-7a-3JV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HuA-To-EgN"/>
-                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="KDY-LP-WbQ"/>
-                            <constraint firstItem="g6S-T4-STC" firstAttribute="top" secondItem="qKN-yZ-2Uf" secondAttribute="bottom" constant="8" symbolic="YES" id="L5D-9r-YgT"/>
-                            <constraint firstItem="GfT-eY-pMq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="OAz-cQ-BHY"/>
-                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="Sdt-y8-gyh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GfT-eY-pMq" secondAttribute="bottom" constant="38" id="Vyo-yQ-Xnv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="115" id="twf-fc-GxC"/>
-                            <constraint firstAttribute="trailing" secondItem="sMR-7a-3JV" secondAttribute="trailing" id="xog-fm-hsM"/>
-                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="g6S-T4-STC" secondAttribute="leading" id="zHG-nE-jzP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GfT-eY-pMq" secondAttribute="trailing" priority="999" constant="176" id="2co-iP-zTi"/>
+                            <constraint firstItem="lM8-7U-4ls" firstAttribute="centerX" secondItem="sMR-7a-3JV" secondAttribute="centerX" id="AgL-Zz-lxT"/>
+                            <constraint firstItem="sMR-7a-3JV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Axf-EX-yUK"/>
+                            <constraint firstItem="sMR-7a-3JV" firstAttribute="top" secondItem="g6S-T4-STC" secondAttribute="bottom" constant="8" symbolic="YES" id="DNo-PO-dA7"/>
+                            <constraint firstItem="lM8-7U-4ls" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="188" id="F42-3o-wc4"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="top" secondItem="lM8-7U-4ls" secondAttribute="bottom" constant="30" id="Jsu-TT-zXL"/>
+                            <constraint firstAttribute="bottom" secondItem="lM8-7U-4ls" secondAttribute="bottom" constant="130" id="M7V-jU-3ch"/>
+                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="g6S-T4-STC" secondAttribute="leading" id="OCt-Zi-5qU"/>
+                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="T2P-nx-cgo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qKN-yZ-2Uf" secondAttribute="trailing" symbolic="YES" id="UET-Yf-Mbc"/>
+                            <constraint firstAttribute="trailing" secondItem="sMR-7a-3JV" secondAttribute="trailing" id="UHS-5z-v8t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g6S-T4-STC" secondAttribute="trailing" symbolic="YES" id="kLp-8v-961"/>
+                            <constraint firstItem="qKN-yZ-2Uf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="nxC-Sj-btb"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="osu-x7-uLS"/>
+                            <constraint firstItem="GfT-eY-pMq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="999" constant="176" id="tZa-Ga-2fx"/>
+                            <constraint firstItem="g6S-T4-STC" firstAttribute="top" secondItem="qKN-yZ-2Uf" secondAttribute="bottom" constant="8" symbolic="YES" id="ucH-2i-d4a"/>
+                            <constraint firstItem="lM8-7U-4ls" firstAttribute="top" secondItem="sMR-7a-3JV" secondAttribute="bottom" constant="17" id="wkz-HO-XbJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GfT-eY-pMq" secondAttribute="bottom" constant="4" id="xAv-TU-7ao"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
