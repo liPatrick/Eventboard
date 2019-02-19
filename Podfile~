@@ -6,7 +6,6 @@ target 'Eventboard' do
   use_frameworks!
 
   # Pods for Eventboard
-  pod 'CardsLayout'
   target 'EventboardTests' do
     inherit! :search_paths
     # Pods for testing

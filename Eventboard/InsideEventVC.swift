@@ -31,15 +31,10 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.bodytext.font = UIFont(name: "Quicksand-Light", size: 12)
         cell.bodytext.text = "Email: danielbess16@gmail.com\nPhone: 4087969033\nWebsite: www.google.com"
         cell.bodytext.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
-        
-        
         cell.cardView.layer.shadowColor = UIColor(red: 0.12, green: 0.13, blue: 0.25, alpha: 0.12).cgColor
         cell.cardView.layer.shadowOpacity = 1
         cell.cardView.layer.shadowOffset = CGSize.zero
         cell.cardView.layer.shadowRadius = 5
-        
-        
-        
         return cell
     }
     
@@ -49,19 +44,14 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
-        
     }
     
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.tableView.delegate = self
-        //self.tableView.dataSource = self
         
         //image gradient
         let colorLeft = UIColor(red: 0.12, green: 0.13, blue: 0.25, alpha: 1).cgColor

@@ -16,6 +16,8 @@
 		21BDAE9E2210FC45008A37DF /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDAE9D2210FC45008A37DF /* CardViewCell.swift */; };
 		21BDAEA02210FCD0008A37DF /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BDAE9F2210FCD0008A37DF /* CardModel.swift */; };
 		43DBCACE86AFF9BF30E110D3 /* Pods_EventboardUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE6967D3FA8A7470433136C /* Pods_EventboardUITests.framework */; };
+		9D115850221B649800C9AF53 /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D11584F221B649800C9AF53 /* CreateEventVC.swift */; };
+		9D115854221B6E8900C9AF53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D115853221B6E8800C9AF53 /* GoogleService-Info.plist */; };
 		9DBCF099220F94B5005E2926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCF098220F94B5005E2926 /* AppDelegate.swift */; };
 		9DBCF09B220F94B5005E2926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCF09A220F94B5005E2926 /* ViewController.swift */; };
 		9DBCF09E220F94B5005E2926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBCF09C220F94B5005E2926 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		33D1F408B60B213673CADE08 /* Pods_Eventboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eventboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE6967D3FA8A7470433136C /* Pods_EventboardUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventboardUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BED6F6091579FA8B4F24B1F /* Pods-EventboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventboardTests.debug.xcconfig"; path = "Target Support Files/Pods-EventboardTests/Pods-EventboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D11584F221B649800C9AF53 /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
+		9D115853221B6E8800C9AF53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DBCF095220F94B5005E2926 /* Eventboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBCF098220F94B5005E2926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DBCF09A220F94B5005E2926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				9DBCF0A4220F94B6005E2926 /* Info.plist */,
 				2135D6B52210F3C800810766 /* fonts */,
 				9DBCF0C622111ECF005E2926 /* InsideEventVC.swift */,
+				9D11584F221B649800C9AF53 /* CreateEventVC.swift */,
+				9D115853221B6E8800C9AF53 /* GoogleService-Info.plist */,
 			);
 			path = Eventboard;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 				9DBCF091220F94B5005E2926 /* Sources */,
 				9DBCF092220F94B5005E2926 /* Frameworks */,
 				9DBCF093220F94B5005E2926 /* Resources */,
+				1DCA3310883B95D9D4461063 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +321,7 @@
 			files = (
 				9DBCF0A3220F94B6005E2926 /* LaunchScreen.storyboard in Resources */,
 				2135D6B32210F3C200810766 /* Quicksand-Bold.ttf in Resources */,
+				9D115854221B6E8900C9AF53 /* GoogleService-Info.plist in Resources */,
 				21BDAE9C2210FA27008A37DF /* CardView.xib in Resources */,
 				2135D6B42210F3C200810766 /* Quicksand-Regular.ttf in Resources */,
 				2135D6B12210F3C200810766 /* Quicksand-Medium.ttf in Resources */,
@@ -360,6 +368,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DCA3310883B95D9D4461063 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eventboard/Pods-Eventboard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eventboard/Pods-Eventboard-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		226248CDE32EB45C341EA1D4 /* [CP] Check Pods Manifest.lock */ = {
@@ -416,6 +458,7 @@
 				21BDAE9E2210FC45008A37DF /* CardViewCell.swift in Sources */,
 				9DBCF0C722111ECF005E2926 /* InsideEventVC.swift in Sources */,
 				21BDAEA02210FCD0008A37DF /* CardModel.swift in Sources */,
+				9D115850221B649800C9AF53 /* CreateEventVC.swift in Sources */,
 				9DBCF09B220F94B5005E2926 /* ViewController.swift in Sources */,
 				9DBCF099220F94B5005E2926 /* AppDelegate.swift in Sources */,
 			);

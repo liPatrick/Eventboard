@@ -68,6 +68,9 @@
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.73725490199999999" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QHP-6t-uhf" kind="presentation" id="RoA-aV-9K6"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lM8-7U-4ls">
                                 <rect key="frame" x="188" y="729" width="38" height="37"/>
@@ -192,6 +195,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRD-2o-4yI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="137.94642857142856"/>
+        </scene>
+        <!--Create EventVC-->
+        <scene sceneID="bfq-LD-B4x">
+            <objects>
+                <viewController id="QHP-6t-uhf" customClass="CreateEventVC" customModule="Eventboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fsg-Y0-iad">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1Y-4a-8Q8">
+                                <rect key="frame" x="146" y="433" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create New Event"/>
+                                <connections>
+                                    <action selector="createEventButtonPressed:" destination="QHP-6t-uhf" eventType="touchUpInside" id="o8R-gE-gzf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PRU-2I-SbH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWq-cq-dUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-520"/>
         </scene>
     </scenes>
     <resources>

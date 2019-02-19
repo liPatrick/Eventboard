@@ -44,6 +44,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.addEventButton.layer.cornerRadius = 0.5 * self.addEventButton.bounds.size.width
         self.addEventButton.clipsToBounds = false
         
+        
         // setup collection view
         // change this later to a UIPageController to have the three white dots
         self.collectionView.isPagingEnabled = true

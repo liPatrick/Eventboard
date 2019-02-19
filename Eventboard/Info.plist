@@ -48,5 +48,7 @@
 		<string>Quicksand-Medium.ttf</string>
 		<string>Quicksand-Regular.ttf</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Eventboard would like to use your current location</string>
 </dict>
 </plist>
