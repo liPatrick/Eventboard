@@ -12,19 +12,8 @@ import MapKit
 import CoreLocation
 
 //We can move these classes into sepearte files or into the insideEvent vc file later
-class PostObject{
-    var post_creator_id: String
-    var post_title: String
-    var post_text: String
-    
-    init(creator_id: String, title: String, text: String) {
-        self.post_creator_id = creator_id
-        self.post_title = title
-        self.post_text = text
-    }
-}
-
 class EventObject{
+    //var event_id: String
     var event_creator_id: String
     var event_title: String
     var event_summary: String
