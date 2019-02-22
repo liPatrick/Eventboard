@@ -113,10 +113,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="imageView" destination="hwh-pU-MTV" id="g20-Z6-p9Z"/>
-                <outlet property="moreInfoButton" destination="xrP-tI-p72" id="XTw-pz-gR0"/>
-                <outlet property="summaryDescription" destination="tSo-MW-cTd" id="CEa-cW-yQ4"/>
-                <outlet property="summaryLabel" destination="nR2-xW-or7" id="OVI-n6-fhE"/>
+                <outlet property="date" destination="tHN-F4-X58" id="P9G-9F-SQe"/>
+                <outlet property="event_name" destination="ngk-ar-QnU" id="wEQ-mt-6nP"/>
+                <outlet property="id" destination="KbG-Oe-S0f" id="d6Y-Wm-JYo"/>
+                <outlet property="image_view" destination="hwh-pU-MTV" id="LYc-i9-0Oc"/>
+                <outlet property="more_info_button" destination="xrP-tI-p72" id="lBa-hy-EXa"/>
+                <outlet property="summary_description" destination="tSo-MW-cTd" id="jOo-Ew-pdX"/>
+                <outlet property="summary_label" destination="nR2-xW-or7" id="Qx5-PX-czl"/>
             </connections>
             <point key="canvasLocation" x="120.8" y="-150.67466266866569"/>
         </view>

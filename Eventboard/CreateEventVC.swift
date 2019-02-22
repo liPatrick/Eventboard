@@ -68,15 +68,8 @@ class CreateEventVC: UIViewController, CLLocationManagerDelegate {
         }*/
     }
     
-    //get current location of device, will be useful when implementing location select through mapview
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
-    
     //this function is called when eventbutton is pressed and also handles creating a event inside firestore. Does not include calls to other functions in this vc other than firestore api.
     @IBAction func createEventButtonPressed(_ sender: Any) {
-        
         var event_creator_id: String = "thisisadefaultid" //get from current user
         var event_title: String = "default title" //get from text field
         var event_summary: String = "default summary: blockchain with neural net capabilities are awesome and also we serve chocolates" //get from text field
