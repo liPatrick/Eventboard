@@ -179,9 +179,9 @@
 				2135D6B52210F3C800810766 /* fonts */,
 				9DBCF0C622111ECF005E2926 /* InsideEventVC.swift */,
 				9D11584F221B649800C9AF53 /* CreateEventVC.swift */,
-				9D115853221B6E8800C9AF53 /* GoogleService-Info.plist */,
 				9D115855221B80C000C9AF53 /* CreateUserVC.swift */,
 				9D115857221B82BC00C9AF53 /* CreatePostVC.swift */,
+				9D115853221B6E8800C9AF53 /* GoogleService-Info.plist */,
 			);
 			path = Eventboard;
 			sourceTree = "<group>";

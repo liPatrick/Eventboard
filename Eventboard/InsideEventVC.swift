@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
@@ -18,6 +19,13 @@ class EventTableViewCell: UITableViewCell {
 class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet weak var eventDescription: UILabel!
+    
+    
+    let db = Firestore.firestore()
+    var postList: [PostObject]!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // load data from firebase later
@@ -46,9 +54,7 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return 150
     }
     
-    @IBOutlet weak var eventImage: UIImageView!
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var eventDescription: UILabel!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +75,33 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         //setup
         self.eventTitle.font = UIFont(name: "Quicksand-Bold", size: 32)
         self.eventDescription.font = UIFont(name: "Quicksand-Regular", size: 18)
+        
+        //firebase loading
+        getEvent(eventID: "2TWmP8KcfbF48uC7SKQ7")
+    }
+    
+    func getEvent(eventID: String){
+        let docRef = db.collection("events").document(eventID)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                
+                docRef.collection("posts").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
+                        }
+                    }
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+
     }
     
 }
