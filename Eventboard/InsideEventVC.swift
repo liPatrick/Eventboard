@@ -26,6 +26,7 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     let db = Firestore.firestore()
     var postList: [PostObject]!
+    var eventObject: EventObject!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // load data from firebase later
@@ -77,29 +78,31 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         self.eventDescription.font = UIFont(name: "Quicksand-Regular", size: 18)
         
         //firebase loading
+        self.postList = []
+        
         getEvent(eventID: "2TWmP8KcfbF48uC7SKQ7")
     }
     
     func getEvent(eventID: String){
         let docRef = db.collection("events").document(eventID)
         
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print("Document data: \(dataDescription)")
-                
-                docRef.collection("posts").getDocuments() { (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                        }
-                    }
-                }
+        docRef.collection("posts").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
             } else {
-                print("Document does not exist")
+                for document in querySnapshot!.documents {
+                    let data = document.data()
+                    let post_creator_id = data["post_creator_id"] as! String
+                    let date_created = data["date_created"] as! String
+                    let post_text = data["post_text"] as! String
+                    let post_title = data["post_title"] as! String
+                    let object = PostObject(creator_id: post_creator_id, title: post_title, text: post_text, date_created: date_created)
+                    print("looki")
+                    self.postList.append(object)
+                    
+                }
             }
+            
         }
 
     }

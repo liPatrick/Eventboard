@@ -14,9 +14,9 @@ class PostObject{
     var post_creator_id: String
     var post_title: String
     var post_text: String
-    var date_created: NSDate
+    var date_created: String
     
-    init(creator_id: String, title: String, text: String, date_created: NSDate) {
+    init(creator_id: String, title: String, text: String, date_created: String) {
         self.post_creator_id = creator_id
         self.post_title = title
         self.post_text = text

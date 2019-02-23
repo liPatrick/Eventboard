@@ -67,7 +67,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     //let date = date_formatter.date(from: data["date"] as! String)
                     //date_formatter.dateFormat = .full
                     
-                    let object = EventObject(event_creator_id: creator_id, title: event_title, summary: event_summary, geo_radius: Int(geo_radius), lat: latitude, long: longitude, post_id_list: [], date_created: NSDate(), comments_enabled: comments)
+                    let object = EventObject(event_creator_id: creator_id, title: event_title, summary: event_summary, geo_radius: Int(geo_radius), lat: latitude, long: longitude, post_id_list: [], date_created: "", comments_enabled: comments)
                     let loc = CLLocation(latitude: CLLocationDegrees(exactly: latitude)!, longitude: CLLocationDegrees(exactly: longitude)!)
                     if(self.dataIsValid(coord: loc, geo_radius: geo_radius)) {
                         self.data.append(object)

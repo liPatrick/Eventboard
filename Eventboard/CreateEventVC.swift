@@ -20,11 +20,11 @@ class EventObject{
     var geo_radius: Int
     var lat: Double
     var long: Double
-    var date_created: NSDate
+    var date_created: String
     var comments_enabled: Bool
     var post_id_list: [PostObject]
     
-    init(event_creator_id: String, title: String, summary: String, geo_radius: Int, lat: Double, long: Double, post_id_list: [PostObject], date_created: NSDate, comments_enabled: Bool) {
+    init(event_creator_id: String, title: String, summary: String, geo_radius: Int, lat: Double, long: Double, post_id_list: [PostObject], date_created: String, comments_enabled: Bool) {
         self.event_creator_id = event_creator_id
         self.event_title = title
         self.event_summary = summary
