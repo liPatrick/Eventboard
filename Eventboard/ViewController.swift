@@ -89,13 +89,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         var curr_loc : CLLocation!
         if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse || CLLocationManager.authorizationStatus() == .authorizedAlways) {
             curr_loc = self.locationManager.location
+            let distance = curr_loc.distance(from: coord)
+            print("Distance = " + String(distance))
+            if(distance <= Double(geo_radius)) {
+                return true
+            }
         }
-        print(coord)
-        print(curr_loc)
-        let distance = curr_loc.distance(from: coord)
-        print("Distance = " + String(distance))
-        if(distance <= Double(geo_radius)) {
-            return true
+        else{
+            showAlert(message: "Please enable location services in settings")
         }
         return false
     }

@@ -85,7 +85,6 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func getEvent(eventID: String){
         let docRef = db.collection("events").document(eventID)
-        
         docRef.collection("posts").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -99,12 +98,9 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     let object = PostObject(creator_id: post_creator_id, title: post_title, text: post_text, date_created: date_created)
                     print("looki")
                     self.postList.append(object)
-                    
                 }
             }
-            
         }
-
     }
     
 }

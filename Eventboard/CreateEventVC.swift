@@ -74,8 +74,8 @@ class CreateEventVC: UIViewController, CLLocationManagerDelegate {
         var event_title: String = "default title" //get from text field
         var event_summary: String = "default summary: blockchain with neural net capabilities are awesome and also we serve chocolates" //get from text field
         var geo_radius: Int = 100 //set as default for now (100 meters)
-        var lat: Double = 37.262865 //get from selected point on a map view
-        var long: Double = -122.033150
+        var lat: Double = 1 //get from selected point on a map view
+        var long: Double = 1
         var date_created: NSDate = NSDate() //leave as is
         var comments_enabled: Bool = false //set as false as default
         
