@@ -30,20 +30,24 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // load data from firebase later
-        return 2
+        return postList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath)
             as! EventTableViewCell
+        var index = indexPath.row
         cell.title.font = UIFont(name: "Quicksand-Bold", size: 15)
         cell.bodytext.font = UIFont(name: "Quicksand-Light", size: 12)
-        cell.bodytext.text = "Email: danielbess16@gmail.com\nPhone: 4087969033\nWebsite: www.google.com"
+        /*"Email: danielbess16@gmail.com\nPhone: 4087969033\nWebsite: www.google.com"*/
         cell.bodytext.textColor = UIColor(red: 0.14, green: 0.14, blue: 0.14, alpha: 1)
         cell.cardView.layer.shadowColor = UIColor(red: 0.12, green: 0.13, blue: 0.25, alpha: 0.12).cgColor
         cell.cardView.layer.shadowOpacity = 1
         cell.cardView.layer.shadowOffset = CGSize.zero
         cell.cardView.layer.shadowRadius = 5
+        
+        cell.title.text = postList[index].post_title
+        cell.bodytext.text = postList[index].post_text
         return cell
     }
     
@@ -54,8 +58,6 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +75,13 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         eventImage.addSubview(view)
         eventImage.bringSubviewToFront(view)
         
-        //setup
+        //font setup
         self.eventTitle.font = UIFont(name: "Quicksand-Bold", size: 32)
         self.eventDescription.font = UIFont(name: "Quicksand-Regular", size: 18)
+        
+        //eventpage setup
+        self.eventTitle.text = self.eventObject.event_title
+        self.eventDescription.text = self.eventObject.event_summary
         
         //firebase loading
         self.postList = []
@@ -96,10 +102,10 @@ class InsideEventVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                     let post_text = data["post_text"] as! String
                     let post_title = data["post_title"] as! String
                     let object = PostObject(creator_id: post_creator_id, title: post_title, text: post_text, date_created: date_created)
-                    print("looki")
                     self.postList.append(object)
                 }
-            }
+                self.tableView.reloadData()
+            } 
         }
     }
     

@@ -35,9 +35,9 @@ class CreatePostVC: UIViewController {
     
     @IBAction func createPostButtonPressed(_ sender: Any) {
         var post_creator_id: String = "thisisdefaultid" //get from current user
-        var post_title: String = "default title" //get from text field
+        var post_title: String = "post 3" //get from text field
         var post_text: String = "default text: blockchain with neural net capatbilites are awesome and also we serve chocolates"
-        var date_created: NSDate = NSDate()
+        var date_created: String = ""
         
         let docData: [String: Any] = [
             "post_creator_id": post_creator_id,

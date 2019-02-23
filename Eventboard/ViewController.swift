@@ -44,8 +44,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let db = Firestore.firestore()
     let locationManager = CLLocationManager()
-    
     var data : [EventObject] = []
+    var selectedEvent: EventObject!
     
     // read events
     func readEvents() {
@@ -160,6 +160,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                               (CardModel(image: UIImage(named: "coffee")!, summaryDescription: "Presenting on the effects of simple convoluntional neural networks, using MATLab and Python.")),
                               (CardModel(image: UIImage(named: "coffee")!, summaryDescription: "Presenting on the effects of simple convoluntional neural networks, using MATLab and Python."))]*/
     //let data : [EventObject] = [(EventObject(event_creator_id: "1", title: "TEDx Saratoga High", summary: "We hit the quan like none other. This is a deep learning excercise for only the sickest people.", geo_radius: 100, lat: 37.280560, long: -121.978741, post_id_list: [], date_created: NSDate(), comments_enabled: false))]
+   
+    //perform segue when clicking on event
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedEvent = data[indexPath.row]
+        self.performSegue(withIdentifier: "goToDetailEvent", sender: self)
+    }
+    
+    //prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailPage = segue.destination as? InsideEventVC {
+            detailPage.eventObject = selectedEvent
+        }
+    }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardViewCell

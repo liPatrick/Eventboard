@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="addEventButton" destination="GfT-eY-pMq" id="gdY-lx-g0W"/>
                         <outlet property="collectionView" destination="sMR-7a-3JV" id="Y1W-Ho-2bA"/>
+                        <segue destination="Mq2-xo-rVG" kind="presentation" identifier="goToDetailEvent" id="nNP-7r-ShC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRD-2o-4yI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850.72463768115949" y="137.94642857142856"/>
+            <point key="canvasLocation" x="938" y="156"/>
         </scene>
         <!--Create PostVC-->
         <scene sceneID="qbr-Cx-90q">
